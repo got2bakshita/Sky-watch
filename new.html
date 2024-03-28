@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyWatch</title>
+    <link rel="stylesheet" href="new.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="for_nav">
+
+        <div class="logo">
+            <img class="logo-img" src="https://img.icons8.com/color/48/weather-forecast.png"
+                alt="weather-forecast" />
+            <p class="logo-text">SkyWatch</p>
+        </div>
+
+
+        <div class="logs">
+            <ul>
+
+                <li style="--i:#000;--j:#999">
+                    <span class="icon"></span>
+                    <span class="title"></span>
+                </li>
+
+                <li style="--i:#000;--j:#999">
+                    <span class="icon"></span>
+                    <span class="title"></span>
+                </li>
+
+
+                <li style="--i:#000;--j:#999">
+                    <span class="icon"></span>
+                    <span class="title"></span>
+                </li>
+
+
+                <li style="--i:#000;--j:#999">
+                    <span class="icon"></span>
+                    <span class="title"></span>
+                </li>
+
+
+                <li style="--i:#000;--j:#999">
+                    <span class="icon"></span>
+                    <span class="title"></span>
+                </li>
+
+
+
+            </ul>
+        </div>
+
+
+    </div>
+</nav>
+
+<!--  head img section -->
+
+<div class="back_img">
+    <img src="https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="img here">
+    <div class="overlay-text">
+        <h1>Let's see how is today's weather.</h1>
+    </div>
+</div>
+
+
+
+
+
+<!-- ... mid part of code ... -->
+
+<div class="newbody">
+
+  <div class="wrapper">
+    <div class="sidebar">
+      <div>
+        <form class="search" id="search">
+          <input type="text" id="query" placeholder="Search..." />
+          <button class="btn_search"  type="submit"><img class="btn_search" width="20" height="20"
+            src="https://img.icons8.com/ios/30/search--v1.png" alt="search" /></button>
+        </form>
+
+
+        <div class="weather-icon">
+          <img id="icon" src="icons/sun/4.png" alt="" />
+        </div>
+
+        <div class="temperature">
+          <h1 id="temp">0</h1>
+          <span class="temp-unit">°C</span>
+        </div>
+
+
+        <div class="date-time">
+          <p id="date-time">Monday, 12:00</p>
+        </div>
+
+
+        <div class="divider"></div>
+
+        <div class="condition-rain">
+          <div class="condition">
+            <i class="fas fa-cloud"></i>
+            <p id="condition">condition</p>
+          </div>
+
+
+          <div class="rain">
+            <i class="fas fa-tint"></i>
+            <p id="rain">perc - 0%</p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="location">
+        <div class="location-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <div class="location-text">
+          <p id="location">location</p>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <nav>
+        <ul class="options">
+          <button class="hourly">today</button>
+          <button class="week active">week</button>
+        </ul>
+        <ul class="options units">
+          <button class="celcius active">°C</button>
+          <button class="fahrenheit">°F</button>
+        </ul>
+        <ul class=" options">
+          <div class="mode-toggle">
+            <button id="toggle-btn">Mode</button>
+        </div>
+        </ul>
+        
+      </nav>
+      <div class="cards" id="weather-cards"></div>
+      <div class="highlights">
+        <h2 class="heading">today's highlights</h2>
+        <div class="cards">
+          <div class="card2">
+            <h4 class="card-heading">UV Index</h4>
+            <div class="content">
+              <p class="uv-index">0</p>
+              <p class="uv-text">Low</p>
+            </div>
+          </div>
+          <div class="card2">
+            <h4 class="card-heading">Wind Status</h4>
+            <div class="content">
+              <p class="wind-speed">0</p>
+              <p>km/h</p>
+            </div>
+          </div>
+          <div class="card2">
+            <h4 class="card-heading">Sunrise & Sunset</h4>
+            <div class="content">
+              <p class="sun-rise">0</p>
+              <p class="sun-set">0</p>
+            </div>
+          </div>
+          <div class="card2">
+            <h4 class="card-heading">Humidity</h4>
+            <div class="content">
+              <p class="humidity">0</p>
+              <p class="humidity-status">Normal</p>
+            </div>
+          </div>
+          <div class="card2">
+            <h4 class="card-heading">Visibility</h4>
+            <div class="content">
+              <p class="visibilty">0</p>
+              <p class="visibilty-status">Normal</p>
+            </div>
+          </div>
+          <div class="card2">
+            <h4 class="card-heading">Air Quality</h4>
+            <div class="content">
+              <p class="air-quality">0</p>
+              <p class="air-quality-status">Normal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!--mid part 2-->
+
+<div class="info_cards">
+
+  <h1>INFO CARDS</h1>
+
+  <div class="card-container">
+  <!--CARD 1 -->
+  <div class = "icard">
+    <img src="https://images.unsplash.com/photo-1656618020911-1c7a937175fd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc1MzQyNTE&ixlib=rb-1.2.1&q=80" alt="">
+    <div class="card-content">
+      <h2>
+        UV INDEX
+      </h2>
+      <p>
+        The UV index, or Ultraviolet Index, is a measure of the strength of ultraviolet (UV) radiation from the sun that reaches the Earth's surface.        
+      </p>
+      <a href="uv.html" class="button">
+        Find out more 
+        <span class="material-symbols-outlined">
+          arrow_right_alt
+        </span>
+      </a>
+      
+    </div>
+  </div>
+
+
+
+    <!--CARD 2 -->
+    <div class = "icard">
+      <img src="https://images.unsplash.com/photo-1656618020911-1c7a937175fd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc1MzQyNTE&ixlib=rb-1.2.1&q=80" alt="">
+      <div class="card-content">
+        <h2>
+          WIND STATUS
+        </h2>
+        <p>
+          Wind status refers to the current and forecasted conditions related to atmospheric air movement. It provides users with information about the speed, direction, and possibly gustiness of the wind.
+        </p>
+        <a href="wind.html" class="button">
+          Find out more 
+          <span class="material-symbols-outlined">
+            arrow_right_alt
+          </span>
+        </a>
+        
+      </div>
+    </div>
+
+
+      <!--CARD 3 -->
+  <div class = "icard">
+    <img src="https://images.unsplash.com/photo-1656618020911-1c7a937175fd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc1MzQyNTE&ixlib=rb-1.2.1&q=80" alt="">
+    <div class="card-content">
+      <h2>
+        SUNRISE & SUNSET
+      </h2>
+      <p>
+        "Sunrise" and "Sunset" refer to the specific times when the sun crosses the horizon, marking the beginning and end of daylight, respectively.
+      </p>
+      <a href="ss.html" class="button">
+        Find out more 
+        <span class="material-symbols-outlined">
+          arrow_right_alt
+        </span>
+      </a>
+      
+    </div>
+  </div>
+
+
+
+    <!--CARD 4 -->
+    <div class = "icard">
+      <img src="https://images.unsplash.com/photo-1656618020911-1c7a937175fd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc1MzQyNTE&ixlib=rb-1.2.1&q=80" alt="">
+      <div class="card-content">
+        <h2>
+          HUMIDITY
+        </h2>
+        <p>
+          "Humidity" refers to the amount of water vapor present in the air. It is a crucial meteorological parameter that impacts human comfort, health, and various natural processes.
+        </p>
+        <a href="humidity.html" class="button">
+          Find out more 
+          <span class="material-symbols-outlined">
+            arrow_right_alt
+          </span>
+        </a>
+        
+      </div>
+    </div>
+
+
+
+      <!--CARD 5 -->
+  <div class = "icard">
+    <img src="https://images.unsplash.com/photo-1656618020911-1c7a937175fd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc1MzQyNTE&ixlib=rb-1.2.1&q=80" alt="">
+    <div class="card-content">
+      <h2>
+        VISIBILITY
+      </h2>
+      <p>
+        "Visibility" refers to the distance at which objects can be clearly seen in the atmosphere, typically measured horizontally.
+      </p>
+      <a href="visibility.html" class="button">
+        Find out more 
+        <span class="material-symbols-outlined">
+          arrow_right_alt
+        </span>
+      </a>
+
+    </div>
+  </div>
+
+
+
+    <!--CARD 6 -->
+    <div class = "icard">
+      <img src="https://images.unsplash.com/photo-1656618020911-1c7a937175fd?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc1MzQyNTE&ixlib=rb-1.2.1&q=80" alt="">
+      <div class="card-content">
+        <h2>
+          AIR QUALITY
+        </h2>
+        <p>
+          "Air quality" refers to the measurement of pollutants and other harmful substances present in the atmosphere.
+        </p>
+        <a href="air.html" class="button">
+          Find out more 
+          <span class="material-symbols-outlined">
+            arrow_right_alt
+          </span>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p> &copy; 2024 Weather. All rights reserved.</p>
+  <div class="footer-links">
+      <a href="/terms.html">Terms of Use</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/cookie.html">Cookie Policy</a>
+  </div>
+</footer>
+
+
+
+    <script src="./new.js"></script>
+</body>
+</html>

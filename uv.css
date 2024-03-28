@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('uvuv.jpeg'); /* Replace 'bg.jpg' with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 100%; /* Ensure full viewport height */
+  }
+  
+  .content{
+    background-color: white;
+    padding: 50px;
+    margin-top: 70px;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 70px;
+    text-align: justify;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+  .content h1{
+    text-align: center;
+  }
+
+  .content p{
+    font-size: 1.5em;
+  }
+  
+  
+
